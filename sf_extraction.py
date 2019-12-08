@@ -1,18 +1,18 @@
 # -*- coding: utf-8 -*-
 """
 #############################################################################################
-# Script Name:		  sf_extraction.py
-# Project Name:		 FOX DATA PRODUCTS
-# Writen By:			Systech Solutions - Parvathirajan Natarajan
-# Date Written:		 Dec 07, 2019
+# Script Name:		sf_extraction.py
+# Project Name:		FDP
+# Writen By:		Systech Solutions - Parvathirajan Natarajan
+# Date Written:		Dec 07, 2019
 #
-# Description:		  This script is used for extracting data from Salesforce as a Batch.
+# Description:		This script is used for extracting data from Salesforce as a Batch.
 #
-# Parameters:		   1) [-db] Database Name
-#						2) [-sc] Schema Name
-#					   2) [-sb] Is Sandbox [Yes/No] (Default 'Yes')
-#					   3) [-tn] Table Name - Salesforce Table
-#					   4) [-pr] Process [0 - Count_Check, 1 - Data_Extraction] (Default '0')
+# Parameters:		1) [-db] Database Name
+#			2) [-sc] Schema Name
+#			3) [-sb] Is Sandbox [Yes/No] (Default 'Yes')
+#			4) [-tn] Table Name - Salesforce Table
+#			5) [-pr] Process [0 - Count_Check, 1 - Data_Extraction] (Default '0')
 #
 # Date Modified:		
 # Modified By:			
@@ -287,7 +287,7 @@ if __name__ == '__main__':
 		script_path = os.path.abspath(os.path.dirname(__file__))
 		config_file = (os.path.expanduser(os.path.join(script_path,'.'+scriptnm+'.cfg')))
 		print(config_file)
-		config = getConfig(config_file, 'salesforce-foxp2p1dat')
+		config = getConfig(config_file, 'salesforce-fdpp2p1dat')
 
 		username	= config['username']
 		password	= config['password']
