@@ -317,8 +317,6 @@ if __name__ == '__main__':
 		print(SFAPI)
 		
 		if len(table_name) != 0 and 'data_extraction' in process_nm:
-			"""send the list of dictionaries as argument list for pool map function for multiprocessing """
-
 			try: 
 				if len(table_name) == 1:
 					print(table_name[0])
