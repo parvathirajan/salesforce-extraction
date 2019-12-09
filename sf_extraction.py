@@ -9,15 +9,15 @@
 # Description:		This script is used for extracting data from Salesforce as a Batch.
 #
 # Parameters:		1) [-db] Database Name
-#					2) [-sc] Schema Name
-#					3) [-sb] Is Sandbox [Yes/No] (Default 'Yes')
-#					4) [-tn] Table Name - Salesforce Table
-#					5) [-pr] Process [0 - Count_Check, 1 - Data_Extraction] (Default '0')
+#			2) [-sc] Schema Name
+#			3) [-sb] Is Sandbox [Yes/No] (Default 'Yes')
+#			4) [-tn] Table Name - Salesforce Table
+#			5) [-pr] Process [count_check, data_extraction]
 #
 # Date Modified:		
 # Modified By:			
 #
-# Execution example: python sf_extraction.py -db edh -sc salesforce_sandbox -sb Yes -tn Account
+# Execution example: python sf_extraction.py -db edh -sc salesforce_sandbox -sb Yes -pr data_extraction -tn Account
 #############################################################################################
 """
 
