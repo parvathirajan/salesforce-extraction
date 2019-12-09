@@ -9,15 +9,15 @@
 # Description:		This script is used for extracting data from Salesforce as a Batch.
 #
 # Parameters:		1) [-db] Database Name
-#			2) [-sc] Schema Name
-#			3) [-sb] Is Sandbox [Yes/No] (Default 'Yes')
-#			4) [-tn] Table Name - Salesforce Table
-#			5) [-pr] Process [0 - Count_Check, 1 - Data_Extraction] (Default '0')
+#					2) [-sc] Schema Name
+#					3) [-sb] Is Sandbox [Yes/No] (Default 'Yes')
+#					4) [-tn] Table Name - Salesforce Table
+#					5) [-pr] Process [0 - Count_Check, 1 - Data_Extraction] (Default '0')
 #
 # Date Modified:		
 # Modified By:			
 #
-# Execution example:	python sf_extraction.py -db edh -sc salesforce_sandbox -sb Yes -tn Account
+# Execution example: python sf_extraction.py -db edh -sc salesforce_sandbox -sb Yes -tn Account
 #############################################################################################
 """
 
@@ -181,6 +181,9 @@ Used for Extracting Data from the Salesforce [Below are functions & Desc inside 
 
 
 	def CreateCountDDL(self, *args, tablenames=None):
+		"""
+		Create DDL for taking record count - as Dict or String [Based on the No. of tables passed]
+		"""
 		ddl_dict = dict()
 		if tablenames is not None or args is not None:
 			print('Table Namelist or Args present')
@@ -212,7 +215,7 @@ def getRecordCount(table_name):
 	if type(table_name) == list or type(table_name) == tuple:
 		count_check_sql = SFAPI.CreateCountDDL(tablenames=table_name)
 		rec_count = SFAPI.ExecuteSOQL(count_check_sql, is_count = 1)
-		print(rec_count)
+		#print(rec_count)
 		return rec_count
 	else:
 		print('Inside the Record Count Function for Single table')
